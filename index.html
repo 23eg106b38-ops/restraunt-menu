@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the delicious menu at Spice Garden Restaurant.">
+  <title>Spice Garden | Restaurant Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Spice Garden home"><span class="brand-mark">✦</span><span>SPICE <em>GARDEN</em></span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#about">Our Story</a>
+    </nav>
+    <button class="cart-button" id="open-cart" aria-label="Open shopping cart">Your Order <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">FRESH INGREDIENTS · BOLD FLAVOURS</p>
+        <h1>A little spice.<br><span>A lot of love.</span></h1>
+        <p class="hero-copy">Discover the comfort of authentic Indian food, freshly prepared and served with heart.</p>
+        <a class="primary-button" href="#menu">Explore the menu <span>↗</span></a>
+        <div class="hero-note"><span class="note-line"></span> Made fresh, every single day</div>
+      </div>
+      <div class="hero-badge"><span>100%</span><small>FRESH &<br>FLAVOURFUL</small></div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow dark">MADE WITH LOVE, SERVED WITH PRIDE</p><h2>Our <em>Menu</em></h2></div>
+        <p class="section-intro">Good food brings people together. Find your next favourite.</p>
+      </div>
+      <div class="menu-tools">
+        <div class="filters" id="filters" aria-label="Filter menu categories">
+          <button class="filter active" data-category="All">All items</button>
+          <button class="filter" data-category="Starters">Starters</button>
+          <button class="filter" data-category="Biryani">Biryani</button>
+          <button class="filter" data-category="Main Course">Main course</button>
+          <button class="filter" data-category="Desserts">Desserts</button>
+          <button class="filter" data-category="Drinks">Drinks</button>
+        </div>
+        <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search dishes..." aria-label="Search dishes"></label>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+      <p class="empty-message" id="empty-message" hidden>No dishes found. Try another search.</p>
+    </section>
+
+    <section class="story-section" id="about">
+      <div class="story-image" role="img" aria-label="Indian food being prepared with fresh ingredients"></div>
+      <div class="story-copy"><p class="eyebrow dark">A TASTE OF TRADITION</p><h2>Food made for<br><em>sharing moments.</em></h2><p>At Spice Garden, every dish starts with fresh ingredients, fragrant spices, and a little patience. We bring classic Indian favourites to your table with the warmth of a home-cooked meal.</p><a href="#menu" class="text-link">Find your favourite <span>→</span></a></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">✦</span><span>SPICE <em>GARDEN</em></span></a><p>Good food. Good mood. Always.</p><small>© <span id="year"></span> Spice Garden Restaurant. Demo website.</small></footer>
+
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-panel" id="cart-panel" aria-label="Your order" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow dark">READY WHEN YOU ARE</p><h2>Your <em>Order</em></h2></div><button id="close-cart" class="close-button" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cart-items"><p class="cart-empty">Your cart is waiting for something delicious.</p></div>
+    <div class="cart-footer"><div class="total-line"><span>Total</span><strong id="cart-total">₹0</strong></div><button class="primary-button checkout-button" id="checkout">Place demo order <span>↗</span></button><p class="cart-hint">Demo only — no payment or real order is sent.</p></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
